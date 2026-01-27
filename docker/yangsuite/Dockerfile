@@ -1,11 +1,11 @@
 # Copyright 2022 Cisco Systems, Inc
 
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV DOCKER_RUN  true
 
 ARG PY=python3
-ARG PY_VER=3.8
+ARG PY_VER=3.10
 ARG YS_DIST=/usr/local/lib/python${PY_VER}/dist-packages/yangsuite/
 ARG YS_SETTINGS=${YS_DIST}/settings/
 
@@ -20,7 +20,7 @@ RUN apt-get update && \
         postgresql \
         openssh-client \
         iputils-ping \
-        python3.8 \
+        python3.10 \
         python3-pip \
         gcc \
         libffi-dev \
